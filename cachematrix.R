@@ -4,7 +4,7 @@
 
 makeCacheMatrix <- function(x = matrix()) {
         
-        m <<- NULL
+        m <<- NULL #where I'll store the inverses
         
         set <- function(y) { 
                 x <<- y  ##with this sign you assign a value from another environment
@@ -18,7 +18,8 @@ makeCacheMatrix <- function(x = matrix()) {
         ##here we store everything to call on the next function
 }
 
-## Function description: Calculates or retrieves an already calculated inverse
+## Function description: Calculates the inverse of the matrix created in 
+## makeCacheMatrix or retrieves an already calculated inverse
 
 cacheSolve <- function(x, ...) {
         
